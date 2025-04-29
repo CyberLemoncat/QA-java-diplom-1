@@ -41,6 +41,10 @@ public class Burger {
     }
 
     public String getReceipt() {
+        if (bun == null) {
+            throw new IllegalStateException("Булочка не установлена!");
+        }
+
         StringBuilder receipt = new StringBuilder(String.format("(==== %s ====)%n", bun.getName()));
 
         for (Ingredient ingredient : ingredients) {

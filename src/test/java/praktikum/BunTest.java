@@ -15,11 +15,13 @@ public class BunTest {
 
     @Test
     public void testGetName() {
-        assertEquals("Флюоресцентная булка R2-D3", bun.getName());
+        String expectedName = "Флюоресцентная булка R2-D3";
+        assertEquals("Название булочки не совпадает", expectedName, bun.getName());
     }
 
     @Test
     public void testGetPrice() {
-        assertEquals(988f, bun.getPrice(), 0.01f);
+        float expectedPrice = 988f;
+        assertEquals("Цена булочки не совпадает", expectedPrice, bun.getPrice(), 0.01f);
     }
 }
